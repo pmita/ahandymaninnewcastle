@@ -21,6 +21,6 @@ export default {
         "@typescript-eslint"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off",
+        "extends": ["plugin:react/jsx-runtime"]
     }
 }
