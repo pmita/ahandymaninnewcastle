@@ -1,0 +1,19 @@
+//IMPORTS
+@import '../../styles/function/mixins';
+
+.navbar{
+    min-height: 10vh;
+    width: 100%;
+    padding: 0 5rem;
+    @include flex(row, space-between, center);
+}
+
+.navbarLogo{
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+@media screen and (max-width: 768px){
+    .navbar {
+        padding: 0 2rem;
+    }
+}
