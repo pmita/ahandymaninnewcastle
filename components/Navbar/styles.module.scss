@@ -12,6 +12,10 @@
     font-family: 'Poppins-Bold', sans-serif;
 }
 
+.navbarActions{
+    @include flex(row, flex-end, center, 1.5rem)
+}
+
 @media screen and (max-width: 768px){
     .navbar {
         padding: 0 2rem;

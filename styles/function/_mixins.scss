@@ -1,8 +1,9 @@
-@mixin flex($direction, $justify, $align) {
+@mixin flex($direction, $justify, $align, $gap:0rem) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+    gap: $gap;
 }
 
 @mixin position($position, $repeat, $size){
