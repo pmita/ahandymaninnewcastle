@@ -1,7 +1,10 @@
+//COMPONENTS
+import Banner from "../components/Banner";
+
 const HomePage = () => {
   return (
     <div className="App">
-      <h1>Starting fresh</h1>
+      <Banner />
     </div>
   )
 }
