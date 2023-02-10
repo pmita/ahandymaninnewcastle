@@ -5,15 +5,16 @@ const Banner = () => {
   return (
     <section className={styles.banner}>
       <div className={styles.bannerLeft}>
-        <h2>We paint, we build, and we fix all your problems</h2>
-        <h4>Affordable solutions to common problems, with a unique customer experience for everyday households</h4>
-        <div className={styles.callToActionButtons}>
-          <button className="btn primary">Get in Touch</button>
-          <button className="btn secondary">Check our Work</button>
+        <div className={styles.content}>
+          <h1>We paint, we build, and we fix all your problems</h1>
+          <h3>Affordable solutions to common problems, with a unique customer experience for everyday households</h3>
+          <div className={styles.callToActionButtons}>
+            <button className="btn primary">Get in Touch</button>
+            <button className="btn secondary">Check our Work</button>
+          </div>
         </div>
       </div>
       <div className={styles.bannerRight}>
-        <h1>Test right</h1>
       </div>
     </section>
   );
