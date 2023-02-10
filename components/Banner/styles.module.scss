@@ -14,8 +14,21 @@
 }
 
 .bannerLeft{
-  background-color: red;
-  @include flex(column, center, center);
+  // background-color: red;
+  padding: 0 5rem;
+  max-width: 450px;
+  @include flex(column, center, flex-start, 2.5rem);
+  h2{
+    font-family: 'Poppins-Bold', sans-serif;
+    line-break: normal;
+  }
+  h4{
+    font-family: 'Roboto-Regular', sans-serif;
+    line-break: normal;
+  }
+  .callToActionButtons{
+    @include flex(row, center, center, 1rem);
+  }
 }
 
 .bannerRight{
@@ -26,6 +39,30 @@
 @media only screen and (max-width: 768px){
   .banner{
     @include flex(column, center, stretch);
+  }
+
+  .bannerLeft{
+    order: 2;
+    align-self: center;
+    gap: 1.5rem;
+    .callToActionButtons{
+      @include flex(row, center, center, 1rem);
+    }
+  }
+
+  .bannerRight{
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  .banner{
+    @include flex(column, center, stretch);
+  }
+
+  .bannerLeft{
+    padding: 0 2rem;
+    max-width: 350px;
   }
 }
 
