@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 //COMPONENTS
 import BurgerMenuSVG from '../SVGIcons/BurgerMenuSVG';
 import DarkModeSVG from '../SVGIcons/DarkModeSVG';
@@ -15,10 +15,9 @@ const Navbar = () => {
         setIsNavbarOpen(!isNavbarOpen);
     }
 
-    // USE EFFECTS
-    useEffect(() => {
+    const closeNavbar = (e: any) => {
         setIsNavbarOpen(false);
-    }, []);
+    }
 
     return(
         <nav className={styles.navbar}>
@@ -34,12 +33,12 @@ const Navbar = () => {
                 <div className={styles.darkmodeIcon}>
                     <DarkModeSVG height="25px" width="25px" fill="black" />
                 </div>
-                <Link href="/work">Our Work</Link>
-                <Link href="/contact">
-                    <button className="btn primary">
-                        Contact Us
-                    </button>
-                </Link>
+                <div onClick={closeNavbar}>
+                    <Link href="/work">Our Work</Link>
+                </div>
+                <button className="btn primary" onClick={closeNavbar}>
+                    <Link href="/contact">Contact Us</Link>
+                </button>
             </ul>
             <div className={styles.burgerIcon} onClick={onClick}>
                 <BurgerMenuSVG height='20px' width='20px' fill="black"/>
