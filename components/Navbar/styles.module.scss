@@ -1,0 +1,57 @@
+//IMPORTS
+@import '../../styles/function/mixins';
+@import '../../styles/base/variables';
+
+.navbar{
+    min-height: 10vh;
+    width: 100%;
+    padding: 0 5rem;
+    @include flex(row, space-between, center);
+    position: relative;
+}
+
+.navbarLogo{
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+.navbarActions{
+    @include flex(row, flex-end, center, 1.5rem);
+    .darkmodeIcon{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.burgerIcon{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .navbar {
+        padding: 0 2rem;
+    }
+
+    // responsive navbar
+    .navbarActions{
+        height: 90vh;
+        width: 100%;
+        background: $white-main;
+        position: absolute;
+        top: calc(10vh);
+        left: 0%;
+        transform: translateX(100%);
+        @include flex(column, space-evenly, center, 5rem);
+        transition: $transition;
+        &.active{
+            transform: translateX(0%);
+        }
+    }
+
+    .burgerIcon{
+        display: inline-block;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
