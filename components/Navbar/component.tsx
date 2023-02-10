@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div onClick={closeNavbar}>
                     <Link href="/work">Our Work</Link>
                 </div>
-                <button className="btn primary" onClick={closeNavbar}>
+                <button className="btn secondary" onClick={closeNavbar}>
                     <Link href="/contact">Contact Us</Link>
                 </button>
             </ul>
