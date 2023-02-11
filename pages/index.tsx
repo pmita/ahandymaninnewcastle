@@ -1,5 +1,5 @@
 //COMPONENTS
-import Banner from "../components/Banner";
+import Banner from "../layouts/SplitBanner";
 
 const HomePage = () => {
   return (
