@@ -8,6 +8,7 @@
     padding: 0 5rem;
     @include flex(row, space-between, center);
     position: relative;
+    // overflow-x: hidden;
 }
 
 .navbarLogo{

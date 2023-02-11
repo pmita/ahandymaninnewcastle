@@ -1,0 +1,16 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.bannerImage{
+  flex: 1;
+  @include flex(column, center, center);
+  // background-image: url("/assets/images/PaintBrush.jpg");
+  @include position(center, no-repeat, cover);
+}
+
+@media only screen and (max-width: 768px){
+  .bannerImage{
+    order: 1;
+  }
+}
