@@ -1,0 +1,7 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.ctaButtons{
+  @include flex(row, center, center, 1rem);
+}
