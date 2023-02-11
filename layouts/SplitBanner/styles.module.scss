@@ -8,66 +8,9 @@
   @include flex(row, center, stretch);
 }
 
-.bannerLeft,
-.bannerRight{
-  flex: 1;
-}
-
-.bannerLeft{
-  padding: 0 5rem;
-  @include flex(column, center, flex-start, 2.5rem);
-}
-
-.content{
-  max-width: 500px;
-  @include flex(column, center, flex-start, 2.5rem);
-  h1{
-    font-family: 'Poppins-Bold', sans-serif;
-    line-break: normal;
-  }
-  h3{
-    font-size: 2.8rem;
-    font-family: 'Roboto-Light', sans-serif;
-    line-break: normal;
-  }
-  .callToActionButtons{
-    @include flex(row, center, center, 1rem);
-  }
-}
-
-.bannerRight{
-  @include flex(column, center, center);
-  background-image: url("/assets/images/PaintBrush.jpg");
-  @include position(center, no-repeat, cover);
-}
-
 @media only screen and (max-width: 768px){
   .banner{
     @include flex(column, center, stretch);
-  }
-
-  .bannerLeft{
-    max-height: calc(90vh / 2);
-    padding: 0 2rem;
-    order: 2;
-    align-self: center;
-    gap: 1.5rem;
-    .callToActionButtons{
-      @include flex(row, center, center, 1rem);
-    }
-  }
-
-  .bannerRight{
-    order: 1;
-  }
-}
-
-@media only screen and (max-width: 450px){
-  .bannerLeft{
-    .content{
-      padding: 0rem;
-      max-width: 350px;
-    }
   }
 }
 
