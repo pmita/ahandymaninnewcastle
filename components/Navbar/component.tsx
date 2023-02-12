@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 //COMPONENTS
-import BurgerMenuSVG from '../SVGIcons/BurgerMenuSVG';
-import DarkModeSVG from '../SVGIcons/DarkModeSVG';
+import BurgerMenuSVG from '../SVGs/BurgerMenuSVG';
+import DarkModeSVG from '../SVGs/DarkModeSVG';
 //STYLES
 import styles from './styles.module.scss';
 
