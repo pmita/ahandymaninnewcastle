@@ -9,6 +9,7 @@ export interface SvgComponentProps {
 
 const PoundSymbolSVG: FC<SvgComponentProps> = ({ width, height, fill, ...props}) => (
   <svg 
+    viewBox='0 0 25 25'
     xmlns="http://www.w3.org/2000/svg" 
     width={width}
     height={height}

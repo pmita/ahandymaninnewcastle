@@ -1,0 +1,23 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.fullBanner,
+.halfBanner,
+.quarterBanner{
+  @include flex(column, center, center, 12rem);
+  width: 100%;
+  padding: 12rem;
+}
+
+.fullBanner{
+  height: 100vh;
+}
+
+.halfBanner{
+  height: 50vh;
+}
+
+.quarterBanner{
+  height: 25vh;
+}

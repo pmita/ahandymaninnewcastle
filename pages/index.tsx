@@ -3,8 +3,12 @@ import Link from "next/link";
 import SplitBanner from "../layouts/SplitBanner";
 import BannerContent from "../components/BannerContent";
 import BannerImage from "../components/BannerImage";
+import FullBanner from "../layouts/FullBanner";
 import CTAButtons from "../layouts/CTAButtons";
 import Button from "../components/Button";
+import TilesGrid from "../components/TilesGrid";
+//ASSETS
+import { ourExpertise } from "../variables/ourExpertise";
 
 const HomePage = () => {
   return (
@@ -24,6 +28,19 @@ const HomePage = () => {
         </BannerContent>
         <BannerImage imageUrl="/assets/images/PaintBrush.jpg"/>
       </SplitBanner>
+
+      {/* Expertise section */}
+      <FullBanner
+        bannerSize="fullBanner"
+      >
+        <h3>
+          Bring your dream home to life with our expertise, help, 
+          and catered to you solutions 🔥
+        </h3>
+        <TilesGrid
+          tiles={ourExpertise}
+        />
+      </FullBanner>
       
       {/* About us section */}
       <SplitBanner fullscreen={true}>
