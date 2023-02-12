@@ -3,7 +3,7 @@
 @import '../../styles/function/mixins';
 
 .bannerWrapper{
-  flex: 1;
+  flex: 1 1 40rem;
   padding: 0 5rem;
   @include flex(column, center, flex-start, 2.5rem);
 }
@@ -20,9 +20,6 @@
     font-family: 'Roboto-Light', sans-serif;
     line-break: normal;
   }
-  .callToActionButtons{
-    @include flex(row, center, center, 1rem);
-  }
 }
 
 @media only screen and (max-width: 768px){
@@ -36,11 +33,9 @@
 }
 
 @media only screen and (max-width: 450px){
-  .bannerLeft{
-    .content{
-      padding: 0rem;
-      max-width: 350px;
-    }
+  .bannerContent{
+    padding: 0rem;
+    max-width: 350px;
   }
 }
 

@@ -4,11 +4,15 @@ import styles from './styles.module.scss';
 
 type BannerContentProps = {
   children: ReactNode;
+  order?: number;
 }
 
-const BannerContent = ({ children }:BannerContentProps) =>{
+const BannerContent = ({ children, order }:BannerContentProps) =>{
   return (
-    <div className={styles.bannerWrapper}>
+    <div 
+      className={styles.bannerWrapper} 
+      style={{ order: `"${order}"`}}
+    >
       <div className={styles.bannerContent}>
         {children}
       </div>
