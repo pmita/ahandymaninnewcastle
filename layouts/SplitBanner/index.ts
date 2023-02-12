@@ -1,3 +1,3 @@
-import Banner from "./component";
+import SplitBanner from "./component";
 
-export default Banner;
+export default SplitBanner;

@@ -3,9 +3,8 @@
 @import '../../styles/function/mixins';
 
 .bannerImage{
-  flex: 1;
+  flex: 1 1 40rem;
   @include flex(column, center, center);
-  // background-image: url("/assets/images/PaintBrush.jpg");
   @include position(center, no-repeat, cover);
 }
 
