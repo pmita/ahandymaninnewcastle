@@ -1,4 +1,49 @@
+//IMPORTS
+@import '../base/variables';
+@import '../function/mixins';
+
 .contactPage{
     min-height: 100vh;
     width: 100%;
 }
+
+.form{
+    width: 500px;
+    height: 100%;
+    @include flex(column, flex-start, stretch, 2rem);
+}
+
+.formName,
+.contactDetails,
+.locationDetails,
+.additionalDetails{
+    margin: 1rem 0rem;
+    @include flex(row, stretch, center, 1rem);
+    input,
+    select,
+    textarea{
+        flex: 1 1 40rem;
+        width: 100%;
+        height: 5rem;
+        padding: 1rem;
+        border: 3px solid $black-main;
+    }
+
+    textarea{
+        min-height: 5rem;
+        width: 100%;
+    }
+}
+
+.callToAction{
+    @include flex(row, space-between, center, 1rem);
+    button,
+    h4{
+        flex: 1 1 40rem;
+    }
+    h4{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
