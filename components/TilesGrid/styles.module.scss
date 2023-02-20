@@ -41,3 +41,14 @@
     fill: $white-main;
   }
 }
+
+@media screen and (max-width: 768px){
+  .tile{
+    @include flex(column, center, center, 1rem);
+    padding: 3rem;
+  }
+
+  .description{
+    word-break: break-all;
+  }
+}

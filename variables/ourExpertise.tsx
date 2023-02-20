@@ -16,7 +16,7 @@ export const ourExpertise: ourExpertiseType[] = [
   {
     id: 1,
     title: 'Luxury Results',
-    description: "We are more than happy to work around your schedule and deadlines. Let us know about key date and we will take it from there; and if anything changes we are only a phone call away.",
+    description: "We work around your schedule and deadlines; Let us know about key date and we will take it from there, and if anything changes we are only a phone call away.",
     svgComponent: props => {
       return (
         <CrownSymbolSVG 
