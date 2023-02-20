@@ -1,12 +1,10 @@
-import { FC } from "react"
-
 export interface BurgerMenuSVGProps {
     width: string
     height: string
     fill?: string
 }
 
-const BurgerMenuSVG: FC<BurgerMenuSVGProps> = ({ width, height, fill}) => (
+const BurgerMenuSVG = ({ width, height, fill}: BurgerMenuSVGProps): React.ReactElement => (
   <svg
     viewBox="0 0 16 16"
     xmlSpace="preserve"
@@ -14,8 +12,11 @@ const BurgerMenuSVG: FC<BurgerMenuSVGProps> = ({ width, height, fill}) => (
     width={width}
     height={height}
   >
-    <path d="M0 0h16v2H0zM0 7h16v2H0zM0 14h16v2H0z" fill={fill}/>
+    <path 
+      d="M0 0h16v2H0zM0 7h16v2H0zM0 14h16v2H0z" 
+      fill={fill}
+    />
   </svg>
 )
 
-export default BurgerMenuSVG
+export default BurgerMenuSVG;

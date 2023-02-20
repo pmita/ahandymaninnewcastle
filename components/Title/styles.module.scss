@@ -1,0 +1,16 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.title{
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: $h3;
+  max-width: 850px;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 450px){
+  .title{
+    max-width: 350px;
+  }
+}

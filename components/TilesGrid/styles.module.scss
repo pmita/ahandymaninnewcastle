@@ -1,0 +1,54 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.tilesGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(380px, 380px);
+  gap: 2rem;
+}
+
+.tile{
+  background: $white-main;
+  color: $black-main;
+  border-radius: 10px;
+  @include flex(column, flex-start, flex-start, 2.5rem);
+  padding: 3rem 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.02);
+  svg{
+    fill: $black-main;
+  }
+}
+
+.title{
+  font-family: 'Poppins-Medium', sans-serif;
+  font-size: $h2;
+}
+
+.description{
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: $h4;
+}
+
+.tile:hover{
+  background: $black-main;
+  color: $white-main;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  svg{
+    fill: $white-main;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .tile{
+    @include flex(column, center, center, 1rem);
+    padding: 3rem;
+  }
+
+  .description{
+    word-break: break-all;
+  }
+}

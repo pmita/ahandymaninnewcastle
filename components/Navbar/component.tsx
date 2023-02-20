@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 //COMPONENTS
-import BurgerMenuSVG from '../SVGIcons/BurgerMenuSVG';
-import DarkModeSVG from '../SVGIcons/DarkModeSVG';
+import BurgerMenuSVG from '../SVGs/BurgerMenuSVG';
+import DarkModeSVG from '../SVGs/DarkModeSVG';
 //STYLES
 import styles from './styles.module.scss';
 
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </button>
             </ul>
             <div className={styles.burgerIcon} onClick={onClick}>
-                <BurgerMenuSVG height='20px' width='20px' fill="black"/>
+                <BurgerMenuSVG height='20px' width='s20px' fill="black"/>
             </div>
         </nav>
     );
