@@ -9,6 +9,7 @@ import Button from "../components/Button";
 import TilesGrid from "../components/TilesGrid";
 //ASSETS
 import { ourExpertise } from "../variables/ourExpertise";
+import Title from "../components/Title";
 
 const HomePage = () => {
   return (
@@ -33,10 +34,10 @@ const HomePage = () => {
       <FullBanner
         bannerSize="fullBanner"
       >
-        <h3>
+        <Title>
           Bring your dream home to life with our expertise, help, 
           and catered to you solutions 🔥
-        </h3>
+        </Title>
         <TilesGrid
           tiles={ourExpertise}
         />
