@@ -1,5 +1,5 @@
 //COMPONENTS
-import CrownSymbolSVG from "../components/SVGs/CrownSymbolSVG"
+import CrownSymbolSVG from "../components/SVGs/CrownSymbolSVG";
 import PoundSymbolSVG from "../components/SVGs/PoundSymbolSVG";
 import PieChartSymbolSVG from "../components/SVGs/PieChartSymbolSVG";
 //TYPES
@@ -44,7 +44,12 @@ export const ourExpertise: ourExpertiseType[] = [
     title: 'Smooth Workflow',
     description: "We handle everything, beginning to end. If you encounter any setbacks we are here to talk about and get over them, together.",
     svgComponent: (props) => {
-      return <PieChartSymbolSVG {...props} />
+      return (
+        <PieChartSymbolSVG
+          width={props.width}
+          height={props.height}
+          fill={props.fill}
+        />);
     },
   }
 ];

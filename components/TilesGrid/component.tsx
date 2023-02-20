@@ -20,9 +20,9 @@ const TilesGrid: FC<TilesGridProps> = ({ tiles, children }) => {
     <div className={styles.tilesGrid}>
       {tiles && tiles.map(tile => (
         <div className={styles.tile} key={tile.id}>
-          {tile?.svgComponent({ width: "25px", height: "25px", fill: "#1E1E1E"})}
-          <h2>{tile.title}</h2>
-          <h4>{tile.description}</h4>
+          {tile?.svgComponent({ width: "125px", height: "125px"})}
+          <h2 className={styles.title}>{tile.title}</h2>
+          <h4 className={styles.description}>{tile.description}</h4>
         </div>
       ))}
     </div>
