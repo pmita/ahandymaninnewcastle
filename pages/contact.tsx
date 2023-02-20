@@ -1,10 +1,7 @@
-import Link from 'next/link';
 //COMPONENTS
 import BannerContent from '../components/BannerContent';
 import SplitBanner from '../layouts/SplitBanner';
 import BannerImage from '../components/BannerImage';
-import CTAButtons from '../layouts/CTAButtons';
-import Button from '../components/Button';
 //LIBRARIES
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,11 +14,13 @@ import styles from '../styles/pages/contactPage.module.scss';
 export const validationSchema = z.object({
     firstName: z
         .string()
+        .min(1, { message: "First name is required"})
         .min(2, { message: "First name must be at least 2 characters" })
         .max(20, { message: "First name must be less than 20 characters" }),
 
     lastName: z
         .string()
+        .min(1, { message: "Last name is required"})
         .min(2, { message: "Last name must be at least 2 characters" })
         .max(20, { message: "Last name must be less than 20 characters" }),
     email: z
@@ -59,15 +58,16 @@ const ContactPage = () => {
     });
 
     // EVENT HANDLERS
-    const onSubmit = async (data: FormValues) => {
-        console.log(data);
-    }
+    const onSubmit = handleSubmit(async (data: FormValues) => {
+        console.table(data);
+    });
+    
     return (
         <div className={styles.contactPage}>
             <SplitBanner>
                 <BannerImage imageUrl="/assets/images/PaintBrush.jpg"/>
                 <BannerContent>
-                    <form className={styles.form}>
+                    <form className={styles.form} onSubmit={onSubmit}>
                         <div className={styles.contactDetails}>
                             <input
                                 type="text"
@@ -81,8 +81,8 @@ const ContactPage = () => {
                                 />  
                         </div>
                         
-                        {errors.firstName && <p>{errors.firstName.message}</p>}
-                        {errors.lastName && <p>{errors.lastName.message}</p>}
+                        {errors.firstName && <p className={styles.errorMessage}>{errors.firstName.message}</p>}
+                        {errors.lastName && <p className={styles.errorMessage}>{errors.lastName.message}</p>}
                         
                         <div className={styles.contactDetails}>
                             <input
@@ -97,8 +97,8 @@ const ContactPage = () => {
                                 />  
                         </div>
                         
-                        {errors.email && <p>{errors.email.message}</p>}
-                        {errors.mobilePhone && <p>{errors.mobilePhone.message}</p>}
+                        {errors.email && <p className={styles.errorMessage}>{errors.email.message}</p>}
+                        {errors.mobilePhone && <p className={styles.errorMessage}>{errors.mobilePhone.message}</p>}
                         
                         <div className={styles.locationDetails}>
                             <select {...register("location")}>
@@ -108,7 +108,7 @@ const ContactPage = () => {
                             </select>
                         </div>
                         
-                        {errors.location && <p>{errors.location.message}</p>}
+                        {errors.location && <p className={styles.errorMessage}>{errors.location.message}</p>}
                         
                         <div className={styles.additionalDetails}>
                             <textarea
@@ -117,7 +117,7 @@ const ContactPage = () => {
                             />
                         </div>
                         
-                        {errors.location && <p>{errors.location.message}</p>}
+                        {errors.location && <p className={styles.errorMessage}>{errors.location.message}</p>}
 
                         <div className={styles.callToAction}>
                             <button className="btn secondary" type="submit">
