@@ -2,6 +2,8 @@
 import BannerContent from '../components/BannerContent';
 import SplitBanner from '../layouts/SplitBanner';
 import BannerImage from '../components/BannerImage';
+//HOOKS
+import { useFirestore } from '../hooks/useFirestore';
 //LIBRARIES
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -56,10 +58,24 @@ const ContactPage = () => {
         reValidateMode: 'onBlur',
         resolver: zodResolver(validationSchema)
     });
+    const { uploadDoc } = useFirestore('queries');
 
     // EVENT HANDLERS
     const onSubmit = handleSubmit(async (data: FormValues) => {
-        console.table(data);
+        const formData = {
+            firstName: data.firstName,
+            lastName: data.lastName,
+            email: data.email,
+            mobilePhone: data.mobilePhone,
+            location: data.location,
+            additionalDetails: data.additionalDetails
+        }
+
+        try {
+            await uploadDoc(formData);
+        } catch (err) {
+            throw new Error(err.message);
+        }
     });
     
     return (
