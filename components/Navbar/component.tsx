@@ -41,7 +41,7 @@ const Navbar = () => {
                 </button>
             </ul>
             <div className={styles.burgerIcon} onClick={onClick}>
-                <BurgerMenuSVG height='20px' width='s20px' fill="black"/>
+                <BurgerMenuSVG height='20px' width='20px' fill="black"/>
             </div>
         </nav>
     );

@@ -1,10 +1,20 @@
+//COMPONENTS
+import BannerContent from '../components/BannerContent';
+import SplitBanner from '../layouts/SplitBanner';
+import BannerImage from '../components/BannerImage';
+import ContactForm from '../components/ContactForm';
 // STYLES
 import styles from '../styles/pages/contactPage.module.scss';
 
-const ContactPage = () => {
+const ContactPage = () => {    
     return (
         <div className={styles.contactPage}>
-            <h1>Contact Page</h1>
+            <SplitBanner fullscreen={false}>
+                <BannerImage imageUrl="/assets/images/PaintBrush.jpg"/>
+                <BannerContent>
+                    <ContactForm />
+                </BannerContent>
+            </SplitBanner>
         </div>
     );
 }
