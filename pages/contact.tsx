@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 //COMPONENTS
 import BannerContent from '../components/BannerContent';
 import SplitBanner from '../layouts/SplitBanner';
 import BannerImage from '../components/BannerImage';
-//HOOKS
+//FIREBASE
+import { timestamp } from '../firebase/config';
 import { useFirestore } from '../hooks/useFirestore';
 //LIBRARIES
 import { useForm } from 'react-hook-form';
@@ -55,10 +57,10 @@ const ContactPage = () => {
     const { register, handleSubmit, formState: { errors }} = 
     useForm<FormValues>({
         mode: 'onBlur',
-        reValidateMode: 'onBlur',
         resolver: zodResolver(validationSchema)
     });
-    const { uploadDoc } = useFirestore('queries');
+    const { isPending, uploadDoc } = useFirestore('queries');
+    const router = useRouter();
 
     // EVENT HANDLERS
     const onSubmit = handleSubmit(async (data: FormValues) => {
@@ -68,11 +70,14 @@ const ContactPage = () => {
             email: data.email,
             mobilePhone: data.mobilePhone,
             location: data.location,
-            additionalDetails: data.additionalDetails
+            additionalDetails: data.additionalDetails,
+            createdAt: timestamp(),
+            updatedAt: timestamp()
         }
 
         try {
             await uploadDoc(formData);
+            router.push('/');
         } catch (err) {
             throw new Error(err.message);
         }
@@ -80,7 +85,7 @@ const ContactPage = () => {
     
     return (
         <div className={styles.contactPage}>
-            <SplitBanner>
+            <SplitBanner fullscreen={false}>
                 <BannerImage imageUrl="/assets/images/PaintBrush.jpg"/>
                 <BannerContent>
                     <form className={styles.form} onSubmit={onSubmit}>
@@ -136,9 +141,16 @@ const ContactPage = () => {
                         {errors.location && <p className={styles.errorMessage}>{errors.location.message}</p>}
 
                         <div className={styles.callToAction}>
-                            <button className="btn secondary" type="submit">
-                                Submit
-                            </button>
+                            {isPending && (
+                                <button className="btn secondary" type="button" disabled>
+                                    Loading...
+                                </button>
+                            )}
+                            {!isPending && (
+                                <button className="btn secondary" type="submit">
+                                    Submit
+                                </button>
+                            )}
                             <h4>
                                 or <span>email@google.com</span>
                             </h4>
