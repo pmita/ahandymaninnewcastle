@@ -35,8 +35,7 @@ export const validationSchema = z.object({
     mobilePhone: z
         .string()
         .min(1, { message: "Mobile phone is required" })
-        .min(10, { message: "Mobile phone must be at least 10 characters" })
-        .max(10, { message: "Mobile phone must be less than 11 characters" })
+        .length(10, { message: "Mobile phone must be 10 characters" })
         .regex(/^[0-9]+$/, { message: "Mobile phone must be a number" }),
     location: z
         .string()
