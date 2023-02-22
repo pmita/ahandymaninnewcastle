@@ -1,0 +1,55 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.aboutUsSection{
+  min-height: 100vh;
+  width: 100%;
+  @include flex(row, center, stretch);
+}
+
+.bannerContext,
+.bannerImage{
+  flex: 1 1 40rem;
+}
+
+.bannerContext{
+  display: grid;
+  place-items: center;
+}
+
+.bannerWrapper{
+  padding: 1rem;
+  max-width: 700px;
+  @include flex(column, center, flex-start, 2.5rem);
+  h1{
+    font-family: 'Poppins-Bold', sans-serif;
+    line-break: normal;
+  }
+  h3{
+    font-size: 2.8rem;
+    font-family: 'Roboto-Light', sans-serif;
+    line-break: normal;
+  }
+}
+
+.bannerImage{
+  @include flex(column, center, center);
+  background-image: url('/assets/images/AboutUs.jpg');
+  @include position(center, no-repeat, cover);
+}
+
+.callToAction{
+  @include flex(row, center, center, 1rem);
+}
+
+// Media Queries
+@media only screen and (max-width: 768px){
+  .aboutUsSection{
+    @include flex(column, center, stretch);
+  }
+
+  .bannerWrapper{
+    gap: 2rem;
+  }
+}
