@@ -1,5 +1,5 @@
 //COMPONENTS
-import LandingPageBanner from "../layouts/LandingPageBanner";
+import LandingPageBanner from "../layouts/LandingPageSection";
 import OurExpertiseSection from "../layouts/OurExpertiseSection";
 import AboutUsSection from "../layouts/AboutUsSection";
 
