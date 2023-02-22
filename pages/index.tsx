@@ -10,11 +10,12 @@ import TilesGrid from "../components/TilesGrid";
 //ASSETS
 import { ourExpertise } from "../variables/ourExpertise";
 import Title from "../components/Title";
+import LandingPageBanner from "../layouts/LandingPageBanner";
 
 const HomePage = () => {
   return (
     <div className="App">
-      <SplitBanner>
+      {/* <SplitBanner>
         <BannerContent>
             <h1>We paint, we build, and we fix all your problems</h1>
             <h3>Home improvements and repairs at a reasonable price</h3>
@@ -28,7 +29,9 @@ const HomePage = () => {
             </CTAButtons>
         </BannerContent>
         <BannerImage imageUrl="/assets/images/PaintBrush.jpg"/>
-      </SplitBanner>
+      </SplitBanner> */}
+
+      <LandingPageBanner />
 
       {/* Expertise section */}
       <FullBanner
