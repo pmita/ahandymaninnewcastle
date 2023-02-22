@@ -1,0 +1,10 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.ourExpertiseSection{
+  min-height: 100vh;
+  padding: 12rem;
+  width: 100%;
+  @include flex(column, center, center, 12rem);
+}
