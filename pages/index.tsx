@@ -17,10 +17,10 @@ const HomePage = () => {
       <SplitBanner>
         <BannerContent>
             <h1>We paint, we build, and we fix all your problems</h1>
-            <h3>Affordable solutions to common problems, with a unique customer experience for everyday households</h3>
+            <h3>Home improvements and repairs at a reasonable price</h3>
             <CTAButtons>
               <Button className="btn primary">
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="/contact">Hire Us</Link>
               </Button>
               <Button className="btn secondary">
                 <Link href="/work">Check our Work</Link>
@@ -51,10 +51,11 @@ const HomePage = () => {
         <BannerContent>
             <h1>Who are we?</h1>
             <h3>
-              A father and son duo! My dad bring the skills and plan. 
+              A father and son duo. My dad bring the skills and plan;
               I bring the attitude and tech savy-ness into this business.
-              We started by building our house first and wanted to expand since we know 
-              how hard it is to find the right for job.
+              We started by helping out neighboors and friends but after building
+              a reputation we wanted to expand since we know 
+              how hard it is to find the right for job, person.
             </h3>
             <CTAButtons>
               <Button className="btn secondary">
