@@ -1,0 +1,44 @@
+//IMPORTS
+@import '../../styles/base/variables';
+@import '../../styles/function/mixins';
+
+.footer{
+  min-height: 30vh;
+  width: 100%;
+  color: $black-main;
+  background: $white-main;
+  @include flex(column, center, center, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.footerTitle{
+  font-family: 'Poppins-bold', sans-serif;
+}
+
+.footerSocials,
+.footerLinks{
+  @include flex(row, center, center, 2rem);
+}
+
+.footerLinks{
+  a{
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: $h4;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.floatingIconLeft{
+  position: absolute;
+  top: -5%;
+  left: 5%;
+}
+.floatingIconRight{
+  position: absolute;
+  bottom: -5%;
+  right: 0%;
+}
