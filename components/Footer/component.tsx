@@ -1,6 +1,9 @@
 import Link from 'next/link';
+//COMPONENTS
+import CoffeeMugSVG from '../SVGs/CoffeeMugSVG';
 import FacebookSVG from '../SVGs/FacebookSVG';
 import InstagramSVG from '../SVGs/InstagramSVG';
+import PinSVG from '../SVGs/PinSVG';
 //STYLES
 import styles from './styles.module.scss';
 
@@ -28,6 +31,12 @@ const Footer = () => {
         <Link href="/about">About</Link>
         <Link href="/work">Our Work</Link>
         <Link href="/contact">Get in Touch</Link>
+      </div>
+      <div className={styles.floatingIconLeft}>
+        <PinSVG width="175px" height="175px" fill="#1E1E1E" opacity='0.2'/>
+      </div>
+      <div className={styles.floatingIconRight}>
+        <CoffeeMugSVG width="175px" height="175px" fill="#1E1E1E" opacity='0.2'/>
       </div>
     </section>
   );
