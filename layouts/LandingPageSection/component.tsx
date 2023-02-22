@@ -13,7 +13,7 @@ const LandingPageBanner = () => {
           <h3>Home improvements and repairs at a reasonable price</h3>
           <div className={styles.callToAction}>
             <Button className="btn primary">
-              <Link href="/contact">Hire Us</Link>
+              <Link href="/contact">Get in Touch</Link>
             </Button>
             <Button className="btn secondary">
               <Link href="/work">Check our Work</Link>

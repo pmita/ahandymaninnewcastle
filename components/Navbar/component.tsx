@@ -22,7 +22,7 @@ const Navbar = () => {
     return(
         <nav className={styles.navbar}>
             <h4 className={styles.navbarLogo}>
-                A handyman in Newcastle
+                <Link href="/">A Handyman in Newcastle</Link>
             </h4>
             <ul 
                 className={isNavbarOpen 

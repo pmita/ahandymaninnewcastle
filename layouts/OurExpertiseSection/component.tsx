@@ -10,8 +10,8 @@ const OurExpertiseSection = () => {
   return (
     <section className={styles.ourExpertiseSection}>
       <Title>
-        Bring your dream home to life with our expertise, help, 
-        and catered to you solutions 🔥
+        Bring your dream home to life with our expertise, 
+        help, and catered to you solutions 🔥
       </Title>
       <TilesGrid
         tiles={ourExpertise}

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { BurgerMenuSVGProps } from '../SVGs/BurgerMenuSVG';
 //STYLES
 import styles from './styles.module.scss';
 
@@ -20,9 +21,9 @@ const TilesGrid: FC<TilesGridProps> = ({ tiles, children }) => {
     <div className={styles.tilesGrid}>
       {tiles && tiles.map(tile => (
         <div className={styles.tile} key={tile.id}>
-          {tile?.svgComponent({ width: "100px", height: "100px"})}
-          <h2 className={styles.title}>{tile.title}</h2>
-          <h4 className={styles.description}>{tile.description}</h4>
+          {tile?.svgComponent({ width: "85px", height: "85px" })}
+          <h4 className={styles.title}>{tile.title}</h4>
+          <h5 className={styles.description}>{tile.description}</h5>
         </div>
       ))}
     </div>

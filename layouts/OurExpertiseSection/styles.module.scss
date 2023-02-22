@@ -6,5 +6,18 @@
   min-height: 100vh;
   padding: 12rem;
   width: 100%;
-  @include flex(column, center, center, 12rem);
+  @include flex(column, center, flex-start, 12rem);
+}
+
+//Media Queries
+@media screen and (max-width: 768px){
+  .ourExpertiseSection{
+    padding: 12rem 5rem 0rem;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .ourExpertiseSection{
+    padding: 12rem 2rem 0rem;
+  }
 }
